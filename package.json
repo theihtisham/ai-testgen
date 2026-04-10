@@ -1,0 +1,63 @@
+{
+  "name": "@theihtisham/ai-testgen",
+  "version": "1.0.0",
+  "description": "AI-powered test generator that creates comprehensive test suites from source code",
+  "main": "dist/index.js",
+  "bin": {
+    "ai-testgen": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts",
+    "test": "vitest run tests/config.test.ts tests/language.test.ts tests/file-utils.test.ts tests/generators.test.ts tests/coverage.test.ts tests/watcher.test.ts tests/incremental.test.ts tests/mutation.test.ts && vitest run tests/analyzer.test.ts",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "testing",
+    "ai",
+    "test-generator",
+    "unit-tests",
+    "integration-tests",
+    "mutation-testing",
+    "code-coverage",
+    "jest",
+    "vitest",
+    "pytest",
+    "go-test"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "fast-glob": "^3.3.2",
+    "js-yaml": "^4.1.0",
+    "openai": "^4.67.3",
+    "ora": "^5.4.1",
+    "ts-morph": "^21.0.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.10.0",
+    "cross-env": "^10.1.0",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theihtisham/ai-testgen"
+  }
+}
