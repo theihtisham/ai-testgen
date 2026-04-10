@@ -1,4 +1,5 @@
 <p align="center">
+  <img src="https://img.shields.io/npm/v/@theihtisham/ai-testgen?style=for-the-badge&logo=npm&color=CB3847" alt="npm" />
   <img src="https://img.shields.io/badge/AI--TestGen-v1.0.0-blue" alt="Version" />
   <img src="https://img.shields.io/badge/license-MIT-green" alt="License" />
   <img src="https://img.shields.io/badge/node-%3E%3D18-brightgreen" alt="Node" />
@@ -54,11 +55,21 @@
 - API keys via environment variables only
 - Privacy mode strips source code before AI calls
 
+## Install
+
+```bash
+# npm
+npm install @theihtisham/ai-testgen
+
+# Or use instantly without installing
+npx @theihtisham/ai-testgen
+```
+
 ## Installation
 
 ```bash
 # Clone and install
-git clone https://github.com/yourusername/ai-testgen.git
+git clone https://github.com/theihtisham/ai-testgen.git
 cd ai-testgen
 npm install
 npm run build
